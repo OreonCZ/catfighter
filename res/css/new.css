@@ -1,0 +1,580 @@
+*{
+    box-sizing: border-box;
+    user-select: none;
+    user-zoom: none;
+    margin: 0;
+}
+
+body {
+    background-image: url(./lesik.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#menu {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#menunadpis {
+    max-width: 400px;
+    margin-top: 300px;
+    transition: 1s ease-in-out;
+}
+#menunadpis:hover {
+    max-width: 450px;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+
+#nadpis {
+margin: 0 auto;
+
+max-width: 500px;
+    display: none;
+}
+
+#cat {
+    max-width: 200px;
+    display: none;
+   margin: 0 auto;
+   position: relative;
+   top: 340px;
+}
+
+
+#catdva {
+    max-width: 250px;
+    display: none;
+   margin: 0 auto;
+   position: relative;
+   top: 385px;
+}
+#catsleep {
+    max-width: 250px;
+}
+
+#hrat {
+    max-width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    margin: 5px;
+    display: none;
+}
+#hrat:hover{
+    cursor: pointer;
+}
+#pauza {
+    max-width: 50px;
+    position: absolute;
+    top: 0px;
+    display: none;
+    right: 0%;
+    margin: 5px;
+    display: none;
+}
+#pauza:hover{
+    cursor: pointer;
+}
+
+#znacka {
+    position: absolute;
+    max-width: 140px;
+    top: 650px;
+    left: 5%;
+    display: none;
+}
+#znacka:hover{
+    cursor: pointer;
+}
+#znacka2:hover{
+    cursor: pointer;
+}
+#znackadva:hover{
+    cursor: pointer;
+}
+#sigmaznacka:hover{
+    cursor: pointer;
+}
+#znackadojo {
+    cursor: pointer;
+}
+
+#znacka2 {
+    position: absolute;
+    max-width: 140px;
+    top: 450px;
+    left: 5%;
+    display: none;
+}
+
+#znackadva {
+    position: absolute;
+    max-width: 140px;
+    top: 650px;
+    right: 5%;
+    display: none;
+}
+
+#catfight {
+    display: none;
+    position: absolute;
+    top: 650px;
+    max-width: 300px;
+    right: 300px;
+}
+#enemy {
+    max-width: 250px;
+}
+
+#cathero {
+    display: none;
+    top: 650px;
+    left: 10%;
+    position: absolute;
+    max-width: 170px;
+    transition: .1s;
+}
+#heroattack {
+    display: none;
+    top: 650px;
+    left: 15%;
+    position: absolute;
+    max-width: 250px;
+    transition: .1s;
+
+}
+#hero {
+    max-width: 170px;
+}
+
+#bronze {
+    margin: 0 auto;
+    display: none;
+    position: relative;
+    top: 50px;
+}
+
+#hp {
+    display: none;
+    background-color: green;
+    text-align: center;
+    position: absolute;
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: -80px;
+    left: 80px;
+
+}
+
+#herohp {
+    display: none;
+    background-color: green;
+    text-align: center;
+    position: absolute;
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: -80px;
+}
+
+#hratfight {
+    display: none;
+    max-width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    margin: 5px;
+    cursor: pointer;
+}
+#pauzafight {
+    display: none;
+    max-width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#stat {
+    display: none;
+    position: relative;
+    font-size: 30px;
+    margin: 0 auto;
+    width: 20%;
+    top: 680px;
+}
+
+#hpstat {
+    text-align: center;
+    background-color: green;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dmgstat {
+    text-align: center;
+    background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#cat:hover {
+    cursor: pointer;
+}
+#catdva:hover {
+    cursor: pointer;
+}
+
+#pozadidva {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: none;
+    text-align: center;
+}
+
+#sigmacat {
+    max-width: 400px;
+    width: 400px;
+    height: 500px;
+    position: relative;
+    top: 420px;
+    margin: 0 auto;
+}
+#sigmacat:hover {
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#pauzadva {
+    max-width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    margin: 5px;
+}
+#pauzadva:hover{
+    cursor: pointer;
+}
+#hratdva {
+    max-width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    margin: 5px;
+    display: none;
+}
+#hratdva:hover{
+    cursor: pointer;
+}
+
+#esch {
+    width: 420px;
+    height: 570px;
+    position: absolute;
+    top: 285px;
+    left: 400px;
+}
+#honza {
+    width: 450px;
+    height: 500px;
+    position: absolute;
+    top: 347px;
+    right: 400px;
+}
+
+#counterjedna {
+    text-align: center;
+    font-size: 60px;
+    width: 100%;
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 350px;
+    color: white;
+}
+
+#sigmaznacka {
+    position: absolute;
+    max-width: 140px;
+    left: 0%;
+    margin: 20px;
+}
+
+#dojocat {
+    display: none;
+    margin: 0 auto;
+    max-width: 300px;
+    margin-top: 650px;
+    position: relative;
+}
+#dojocat:hover {
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+
+#wu {
+    display: none;
+    position: relative;
+
+}
+
+#dojopauza {
+    display: none;
+    max-width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    margin: 5px;
+}
+#dojopauza:hover{
+    cursor: pointer;
+}
+#dojohrat {
+    display: none;
+    max-width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    margin: 5px;
+}
+#dojohrat:hover{
+    cursor: pointer;
+}
+#counterdva {
+    text-align: center;
+    font-size: 60px;
+    position: absolute;
+    width: 100%;
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 590px;
+}
+#frank {
+    display: none;
+    max-width: 200px;
+    position: absolute;
+    right: 0px;
+}
+#cena {
+    display: none;
+    position: absolute;
+    max-width: 200px;
+    top: 250px;
+    right: 0px;
+}
+
+#john {
+    display: none;
+    position: absolute;
+    max-width: 200px;
+    top: 450px;
+    font-size: 25px;
+    right: 5px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#znackadojo {
+    position: absolute;
+    max-width: 140px;
+    left: 0%;
+    margin: 20px;
+    display: none;
+    top: 0px;
+}
+
+#fight {
+    max-width: 300px;
+    margin: 0 auto;
+    display: none;
+    position: relative;
+    top: 100px;
+    cursor: pointer;
+}
+
+#zpet {
+    position: absolute;
+    max-width: 140px;
+    left: 0%;
+    margin: 20px;
+    display: none;
+    top: 0px;
+    cursor: pointer;
+}
+
+#info2 {
+    text-align: center;
+    font-size: 30px;
+    display: none;
+    top: 370px;
+    position: relative;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#info {
+    font-size: 30px;
+    background-color: beige;
+    position: absolute;
+    margin: 5px;
+    display: none;
+}
+#infodmg {
+    font-size: 30px;
+    background-color: beige;
+    position: absolute;
+    display: none;
+    margin-top: 200px;
+    margin-left: 5px;
+}
+
+
+@media all and (max-width: 1600px) {
+
+    #esch {
+        width: 260px;
+        height: 340px;
+        left: -20px;
+        top: 378px;
+    }
+    #honza {
+        width: 250px;
+        height: 300px;
+        right: -20px;
+        top: 413px;
+    }
+   
+  }
+  @media all and (max-width: 1200px) {
+    #nadpis {
+        max-width: 350px;
+        position: relative;
+    }
+    #cat {
+        top: 400px;
+    }
+    #catdva {
+        top: 450px;
+    }
+    #wu {
+        margin-top: -550px;
+    }
+    #frank {
+        top: 800px;
+    }
+    #catfight {
+        right: 0px;
+    }
+    #cathero {
+        left: 0px;
+    }
+    #stat {
+        top: 660px;
+        width: 30%;
+    }
+    #bronze {
+        max-width: 350px;
+    }
+    #info2 {
+        top: 310px;
+    }
+    #nadpis {
+        top: 40px;
+    }
+
+  }
+  @media all and (min-width: 1200px) {
+    #wu {
+        margin-left: 200px;
+        margin-top: -400px;
+    }
+    #cena {
+        top: 350px;
+        right: 150px;
+        }
+    #john{
+        top: 550px;
+        right: 150px;
+    }
+    #infodmg {
+        margin-top: 70px;
+    }
+    
+  }
+  @media all and (display-mode: fullscreen) {
+    #esch {
+        top: 360px;
+    }
+    #honza {
+        top: 418px;
+    }
+    #sigmacat {
+        top: 490px;
+    }
+    #counterjedna {
+        top: 420px;
+    }
+    #fight {
+        top: 200px;
+    }
+
+
+    #cat {
+        top: 410px;
+    }
+    #catdva {
+        top: 460px;
+    }
+    #znacka {
+        top: 720px;
+    }
+    #znacka2 {
+        top: 520px;
+    }
+    #znackadva {
+        top: 720px;
+    }
+    #stat {
+        top: 760px;
+    }
+
+
+    #dojocat {
+        margin-top: 792px;
+    }
+    #john {
+        top: 600px;
+    }
+    #cena {
+        top: 400px;
+    }
+    #counterdva {
+        top: 730px;
+    }
+
+
+
+    #menunadpis {
+        margin-top: 390px;
+    }
+  
+
+    #cathero {
+        top: 720px;
+    }
+    #catfight {
+        top: 720px;
+    }
+
+}
