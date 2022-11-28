@@ -387,6 +387,10 @@ zpet.onclick = () => {
   heroattack.style.display = "none";
   info.style.top = "0px";
 
+  if(herohp.innerHTML <= 0){
+    znackadva.style.display = "none";
+    info2.style.display = "block";
+  }
 
 
   hpenemy += hpenemyUp;
@@ -394,11 +398,5 @@ zpet.onclick = () => {
 hpenemyUp += hpenemyPlus
 
   dmgenemy+=dmgenemyUp;
-  
-  if(herohp.innerHTML <= 0){
-    znackadva.style.display = "none";
-    info2.style.display = "block";
-  }
- 
   
 }
