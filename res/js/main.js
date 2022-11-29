@@ -5,6 +5,7 @@ const hudbafight = document.getElementById("hudbafight");
 
 
 const menunadpis = document.getElementById("menunadpis");
+const sponsors = document.getElementById("sponsors");
 
 const hrat = document.getElementById("hrat");
 const pauza = document.getElementById("pauza");
@@ -60,6 +61,7 @@ const infodmg = document.getElementById("infodmg");
 
 const fatality = document.getElementById("fatality");
 
+
 let hpUp = 1;
 let hpmain = 10;
 let hpenemy = 10;
@@ -108,6 +110,7 @@ menunadpis.onclick = () => {
    hudba.play();
    hudba.volume = 0.3;
    info.style.display = "block";
+   sponsors.style.display = "none";
 
 }
 
