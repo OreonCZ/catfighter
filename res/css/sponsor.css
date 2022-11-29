@@ -32,9 +32,17 @@ body {
     text-decoration: none;
 }
 a {
-    font-size: 45px;
+    font-size: 30px;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
     background-color: beige;
+    margin: 20px;
+}
+#back {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    max-width: 140px;
+    cursor: pointer;
 }
