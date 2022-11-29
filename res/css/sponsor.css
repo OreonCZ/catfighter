@@ -45,4 +45,6 @@ a {
     top: 0px;
     max-width: 140px;
     cursor: pointer;
+    color: black;
+    text-decoration: none;
 }
