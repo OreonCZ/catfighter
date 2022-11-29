@@ -58,9 +58,11 @@ const info2 = document.getElementById("info2");
 const info = document.getElementById("info");
 const infodmg = document.getElementById("infodmg");
 
+const fatality = document.getElementById("fatality");
+
 let hpUp = 1;
-let hpmain = 1;
-let hpenemy = 20;
+let hpmain = 10;
+let hpenemy = 10;
 let hpenemyUp = 100;
 
 let dmgUp = 1;
@@ -269,7 +271,11 @@ dojohrat.onclick = () => {
    znacka.style.display = "none";
    znackadva.style.display = "none";
    info.style.top = "0px";
+   if(herohp.innerHTML <= 0){
+    znackadva.style.display = "none";
+  }
  }
+ 
  catdva.onclick = () => {
    cat.style.display = "block";
    catdva.style.display = "none";
@@ -277,6 +283,9 @@ dojohrat.onclick = () => {
    znacka2.style.display = "block";
    znacka.style.display = "block";
    znackadva.style.display = "block";
+   if(herohp.innerHTML <= 0){
+    znackadva.style.display = "none";
+  }
  }
 
 
@@ -301,7 +310,7 @@ dojohrat.onclick = () => {
   hudbafight.volume = 0.3;
   fight.style.display = "block";
   
-  
+
 
 
   const enemyAttack = setInterval(() => {
@@ -311,6 +320,7 @@ dojohrat.onclick = () => {
       fight.style.display = "none";
       bronze.style.display = "block";
       zpet.style.display = "block";
+
       }
     
     if(hp.innerHTML <= 0){
@@ -319,10 +329,13 @@ dojohrat.onclick = () => {
       zpet.style.display = "block";
       info.innerHTML = `Enemies killed: ${enemyKillUp}`
       infodmg.innerHTML = `Dmg points: ${dojocoin}`
+      fatality.style.display = "block";
+      fight.style.display = "none";
+      catfight.style.display = "none";
       enemyKillUp++;
       hpUp++;
       dmgenemy++;
-
+      
 
     }
   }, 250);
@@ -386,13 +399,15 @@ zpet.onclick = () => {
   bronze.style.display = "none";
   heroattack.style.display = "none";
   info.style.top = "0px";
+  fatality.style.display = "none";
+  hero.style.display = "block";
+
+  herohp.innerHTML = hpmain;
 
   if(herohp.innerHTML <= 0){
     znackadva.style.display = "none";
     info2.style.display = "block";
   }
-
-
   hpenemy += hpenemyUp;
   hp.innerHTML = hpenemy;
 hpenemyUp += hpenemyPlus

@@ -438,6 +438,13 @@ max-width: 500px;
     margin-top: 200px;
     margin-left: 5px;
 }
+#fatality {
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    max-width: 500px;
+    top: 10px;
+}
 
 
 @media all and (max-width: 1600px) {
@@ -454,6 +461,7 @@ max-width: 500px;
         right: -20px;
         top: 413px;
     }
+
    
   }
   @media all and (max-width: 1200px) {
@@ -492,6 +500,7 @@ max-width: 500px;
     #nadpis {
         top: 40px;
     }
+   
 
   }
   @media all and (min-width: 1200px) {
@@ -512,6 +521,13 @@ max-width: 500px;
     }
     
   }
+  @media all and (max-width: 700px) {
+    #fatality {
+        max-width: 220px;
+        top: 40px;
+    }
+  }
+
   @media all and (display-mode: fullscreen) {
     #esch {
         top: 360px;
