@@ -1,0 +1,40 @@
+
+body {
+    background-image: url(./lesik.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#vojta {
+    color: black;
+    text-decoration: none;
+}
+#michaladamek {
+    color: black;
+    text-decoration: none;
+}
+#michalkostecky {
+    color: black;
+    text-decoration: none;
+}
+#michalsazka {
+    color: black;
+    text-decoration: none;
+}
+#ondra {
+    color: black;
+    text-decoration: none;
+}
+a {
+    font-size: 45px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    background-color: beige;
+}
