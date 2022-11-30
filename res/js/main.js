@@ -350,6 +350,7 @@ dojohrat.onclick = () => {
       info.innerHTML = `Enemies killed: ${enemyKillUp}`
       infodmg.innerHTML = `Skill points: ${dojocoin}`
       infodmg2.innerHTML = `Skill points: ${dojocoin}`
+      infodmg3.innerHTML = `Skill points: ${dojocoin}`
       fatality.style.display = "block";
       fight.style.display = "none";
       catfight.style.display = "none";
