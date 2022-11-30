@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
 *{
     box-sizing: border-box;
     user-select: none;
     user-zoom: none;
     margin: 0;
+    font-family: 'Trade Winds', cursive;
 }
 
 body {
@@ -19,11 +21,15 @@ body {
 
 #sponsors {
     position: absolute;
-    background-color: beige;
+    background: linear-gradient(white, beige, burlywood);
     bottom: 0px;
     color: black;
     text-decoration: none;
     margin: 5px;
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px black solid;
 }
 
 #menu {
@@ -45,7 +51,7 @@ body {
 
 #nadpis {
 margin: 0 auto;
-
+position: relative;
 max-width: 500px;
     display: none;
 }
@@ -64,7 +70,7 @@ max-width: 500px;
     display: none;
    margin: 0 auto;
    position: relative;
-   top: 385px;
+   top: 365px;
 }
 #catsleep {
     max-width: 250px;
@@ -227,12 +233,10 @@ max-width: 500px;
 #hpstat {
     text-align: center;
     background-color: green;
-    font-family: Arial, Helvetica, sans-serif;font-family: Arial, Helvetica, sans-serif;
 }
 #dmgstat {
     text-align: center;
     background-color: red;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -307,9 +311,8 @@ max-width: 500px;
     font-size: 60px;
     width: 100%;
     display: none;
-    font-family: Arial, Helvetica, sans-serif;
     position: absolute;
-    top: 350px;
+    top: 340px;
     color: white;
 }
 
@@ -324,7 +327,7 @@ max-width: 500px;
     display: none;
     margin: 0 auto;
     max-width: 300px;
-    margin-top: 650px;
+    top: 670px;
     position: relative;
 }
 #dojocat:hover {
@@ -336,7 +339,7 @@ max-width: 500px;
 #wu {
     display: none;
     position: relative;
-
+    top: 700px;
 }
 
 #dojopauza {
@@ -367,14 +370,14 @@ max-width: 500px;
     position: absolute;
     width: 100%;
     display: none;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 590px;
+    top: 600px;
 }
 #frank {
     display: none;
     max-width: 200px;
     position: absolute;
     right: 0px;
+    bottom: 0px;
 }
 #cena {
     display: none;
@@ -387,11 +390,13 @@ max-width: 500px;
 #john {
     display: none;
     position: absolute;
-    max-width: 200px;
+    max-width: 250px;
+    padding-left: 5px;
+    padding-right: 5px;
     top: 450px;
     font-size: 25px;
     right: 5px;
-    background-color: white;
+    background: linear-gradient(white, beige, burlywood);
     border: 1px solid black;
 }
 
@@ -430,22 +435,49 @@ max-width: 500px;
     top: 370px;
     position: relative;
     font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    
 }
 #info {
     font-size: 30px;
-    background-color: beige;
+    background: linear-gradient(white, beige, burlywood);
+    border: 2px solid black;
     position: absolute;
     margin: 5px;
     display: none;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 #infodmg {
     font-size: 30px;
-    background-color: beige;
+    background: linear-gradient(white, beige, burlywood);
     position: absolute;
     display: none;
-    margin-top: 200px;
+    bottom: 5px;
     margin-left: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#infodmg2 {
+    font-size: 30px;
+    background-color: lightgray;
+    border: 2px solid black;
+    position: absolute;
+    display: none;
+    bottom: 5px;
+    margin-left: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#infodmg3 {
+    font-size: 30px;
+    background: linear-gradient(white, beige, burlywood);
+    border: 2px solid black;
+    position: absolute;
+    display: none;
+    bottom: 5px;
+    right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 #fatality {
     display: none;
@@ -477,12 +509,13 @@ max-width: 500px;
     #nadpis {
         max-width: 350px;
         position: relative;
+        margin-top: 5px;
     }
     #cat {
         top: 400px;
     }
     #catdva {
-        top: 450px;
+        top: 420px;
     }
     #wu {
         margin-top: -550px;
@@ -497,7 +530,7 @@ max-width: 500px;
         left: 0px;
     }
     #stat {
-        top: 660px;
+        top: 640px;
         width: 30%;
     }
     #bronze {
@@ -507,7 +540,13 @@ max-width: 500px;
         top: 310px;
     }
     #nadpis {
-        top: 40px;
+        top: 50px;
+    }
+    #sigmacat {
+        top: 380px;
+    }
+    #counterjedna {
+        top: 300px;
     }
    
 
@@ -528,6 +567,7 @@ max-width: 500px;
     #infodmg {
         margin-top: 70px;
     }
+    
     
   }
   @media all and (max-width: 700px) {
@@ -576,7 +616,7 @@ max-width: 500px;
 
 
     #dojocat {
-        margin-top: 792px;
+        top: 800px;
     }
     #john {
         top: 600px;

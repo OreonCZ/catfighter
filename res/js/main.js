@@ -58,38 +58,49 @@ const zpet = document.getElementById("zpet");
 const info2 = document.getElementById("info2");
 const info = document.getElementById("info");
 const infodmg = document.getElementById("infodmg");
+const infodmg2 = document.getElementById("infodmg2");
+const infodmg3 = document.getElementById("infodmg3");
 
 const fatality = document.getElementById("fatality");
 
 
-let hpUp = 1;
+let hpUp = 20;
+let hpUpUp = 5;
 let hpmain = 10;
 let hpenemy = 10;
-let hpenemyUp = 100;
+let hpenemyUp = 120;
 
-let dmgUp = 1;
+let dmgUp = 0.5;
 let dmgmain = 1;
 let dmgenemy = 1;
-let dmgenemyUp = 2;
+let dmgenemyUp = 3;
 
 let enemyKill = 0;
 let enemyKillUp = 1;
 
 let dojocoin = 0;
-let dojocoinUp = 1;
+let dojocoinUp = 5;
 
 
 sigmacat.onclick = () => {
-  hpmain+= hpUp;
-  counterjedna.innerHTML = hpmain +" HP";
-  herohp.innerHTML = hpmain;
-  hpstat.innerHTML = hpmain +" HP";
+  if (dojocoin >= 1){
+    dojocoin -= 1;
+    infodmg2.innerHTML = `Skill points: ${dojocoin}`
+    infodmg.innerHTML = `Skill points: ${dojocoin}`
+    infodmg3.innerHTML = `Skill points: ${dojocoin}`
+    hpmain+= hpUp;
+    counterjedna.innerHTML = `${hpmain} HP`;
+    hpstat.innerHTML = hpmain +" HP";
+  }
+
 }
 
 dojocat.onclick = () => {
   if (dojocoin >= 1){
   dojocoin -= 1;
-  infodmg.innerHTML = `Dmg points: ${dojocoin}`
+  infodmg.innerHTML = `Skill points: ${dojocoin}`
+  infodmg2.innerHTML = `Skill points: ${dojocoin}`
+  infodmg3.innerHTML = `Skill points: ${dojocoin}`
   dmgmain+= dmgUp;
   counterdva.innerHTML = `${dmgmain} DMG`;
   dmgstat.innerHTML = dmgmain +" DMG";
@@ -147,6 +158,7 @@ pauza.onclick = () => {
   hudbadva.volume = 0.3;
   document.body.style.backgroundImage = "url(./res/css/sigma.jpg)"
   counterjedna.style.display = "block";
+  infodmg2.style.display = "block";
 
    
 }
@@ -181,6 +193,7 @@ pozadidva.style.display = "none";
   document.body.style.backgroundImage = "url(./res/css/forestos.jpg)"
   counterjedna.style.display = "none";
   info2.style.display = "none";
+  infodmg2.style.display = "none";
   if(herohp.innerHTML <= 0){
     znackadva.style.display = "none";
   }
@@ -274,6 +287,7 @@ dojohrat.onclick = () => {
    znacka.style.display = "none";
    znackadva.style.display = "none";
    info.style.top = "0px";
+   infodmg3.style.display = "block";
    if(herohp.innerHTML <= 0){
     znackadva.style.display = "none";
   }
@@ -286,6 +300,7 @@ dojohrat.onclick = () => {
    znacka2.style.display = "block";
    znacka.style.display = "block";
    znackadva.style.display = "block";
+   infodmg3.style.display = "none";
    if(herohp.innerHTML <= 0){
     znackadva.style.display = "none";
   }
@@ -312,6 +327,7 @@ dojohrat.onclick = () => {
   hudbafight.play();
   hudbafight.volume = 0.3;
   fight.style.display = "block";
+  herohp.innerHTML = hpmain;
   
 
 
@@ -328,15 +344,16 @@ dojohrat.onclick = () => {
     
     if(hp.innerHTML <= 0){
       clearInterval(enemyAttack);
-      dojocoin++;
+      hpUp+=hpUpUp;
+      dojocoin+=dojocoinUp;
       zpet.style.display = "block";
       info.innerHTML = `Enemies killed: ${enemyKillUp}`
-      infodmg.innerHTML = `Dmg points: ${dojocoin}`
+      infodmg.innerHTML = `Skill points: ${dojocoin}`
+      infodmg2.innerHTML = `Skill points: ${dojocoin}`
       fatality.style.display = "block";
       fight.style.display = "none";
       catfight.style.display = "none";
       enemyKillUp++;
-      hpUp++;
       dmgenemy++;
       
 
