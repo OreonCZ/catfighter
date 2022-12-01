@@ -56,6 +56,54 @@ max-width: 500px;
     display: none;
 }
 
+#portal {
+    display: none;
+    position: absolute;
+    max-width: 300px;
+    bottom: 40px;
+    cursor: pointer;
+}
+
+#portal2 {
+    display: none;
+    position: absolute;
+    max-width: 200px;
+    top: 0px;
+    cursor: pointer;
+}
+
+#hrathell {
+    max-width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    margin: 5px;
+    display: none;
+    cursor: pointer;
+}
+#pausehell {
+    max-width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    margin: 5px;
+    display: none;
+    cursor: pointer;
+}
+#hellcat {
+    position: relative;
+    display: none;
+    max-width: 140px;
+    top: 630px;
+    left: 10%;
+}
+#grim {
+    position: absolute;
+    max-width: 350px;
+    display: none;
+    top: 400px;
+}
+
 #cat {
     max-width: 200px;
     display: none;
@@ -548,7 +596,13 @@ max-width: 500px;
     #counterjedna {
         top: 300px;
     }
-   
+    #portal {
+        max-width: 150px;
+        bottom: 100px;
+    }
+    #grim{
+    right: 20%;
+}
 
   }
   @media all and (min-width: 1200px) {
@@ -567,6 +621,9 @@ max-width: 500px;
     #infodmg {
         margin-top: 70px;
     }
+    #grim{
+        right: 35%;
+    }
     
     
   }
@@ -574,6 +631,9 @@ max-width: 500px;
     #fatality {
         max-width: 220px;
         top: 40px;
+    }
+    #grim{
+        right: 0%;
     }
   }
 
@@ -642,4 +702,11 @@ max-width: 500px;
         top: 720px;
     }
 
+
+    #hellcat {
+        top: 730px;
+    }
+    #grim {
+        top: 500px;
+    }
 }

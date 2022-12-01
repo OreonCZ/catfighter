@@ -2,6 +2,7 @@ const hudba = document.getElementById("hudba");
 const hudbadva = document.getElementById("hudbadva");
 const hudbatri = document.getElementById("hudbatri");
 const hudbafight = document.getElementById("hudbafight");
+const hudbahell = document.getElementById("hudbahell");
 
 
 const menunadpis = document.getElementById("menunadpis");
@@ -62,6 +63,14 @@ const infodmg2 = document.getElementById("infodmg2");
 const infodmg3 = document.getElementById("infodmg3");
 
 const fatality = document.getElementById("fatality");
+
+
+const portal = document.getElementById("portal");
+const portal2 = document.getElementById("portal2");
+const hrathell = document.getElementById("hrathell");
+const pausehell = document.getElementById("pausehell");
+const hellcat = document.getElementById("hellcat");
+const grim = document.getElementById("grim");
 
 
 let hpUp = 20;
@@ -279,7 +288,73 @@ dojohrat.onclick = () => {
    cena.style.display = "block";
    john.style.display = "none";
  }
+
+portal.onclick = () => {
+  portal.style.display = "none";
+  document.body.style.backgroundImage = "url(./res/css/hell.webp)"
+  znacka.style.display = "none";
+   znackadva.style.display = "none";
+   nadpis.style.display = "none";
+   cat.style.display = "none";
+   hrat.style.display = "none";
+   pauza.style.display = "none";
+   pozadi.style.display = "none";
+   znacka2.style.display = "none";
+   stat.style.display = "none";
+   hudba.pause();
+   hudba.currentTime = 0;
+   portal2.style.display = "block";
+   hudbahell.play();
+   hudbahell.volume = 0.3;
+   hudbahell.currentTime = 1.5;
+   pausehell.style.display = "block";
+   hellcat.style.display = "block";
+   grim.style.display = "block";
+}
+pausehell.onclick = () => {
+  pausehell.style.display = "none";
+  hrathell.style.display = "block";
+  hudbahell.pause();
+  hudbahell.currentTime = 1.5;
+}
+hrathell.onclick = () => {
+  pausehell.style.display = "block";
+  hrathell.style.display = "none";
+  hudbahell.play();
+  hudbahell.volume = 0.3;
+}
+
+portal2.onclick = () => {
+  portal.style.display = "block";
+  document.body.style.backgroundImage = "url(./res/css/forestos.jpg)"
+  znacka.style.display = "block";
+   znackadva.style.display = "block";
+   nadpis.style.display = "block";
+   cat.style.display = "block";
+   hrat.style.display = "block";
+   pauza.style.display = "block";
+   pozadi.style.display = "block";
+   znacka2.style.display = "block";
+   stat.style.display = "block";
+   hudba.play();
+  hudba.volume = 0.3;
+  portal2.style.display = "none";
+  stat.style.display = "none";
+  catdva.style.display = "none";
+  hrat.style.display = "none";
+ portal.style.display = "none";
+ hudbahell.pause();
+  hudbahell.currentTime = 1.5;
+  pausehell.style.display = "none";
+  hrathell.style.display = "none";
+  hellcat.style.display = "none";
+  grim.style.display = "none";
+}
+
  cat.onclick = () => {
+  if(enemyKillUp >= 4){
+    portal.style.display = "block";
+    }
    cat.style.display = "none";
    catdva.style.display = "block";
    stat.style.display = "block";
@@ -291,6 +366,7 @@ dojohrat.onclick = () => {
    if(herohp.innerHTML <= 0){
     znackadva.style.display = "none";
   }
+  
  }
  
  catdva.onclick = () => {
@@ -304,6 +380,7 @@ dojohrat.onclick = () => {
    if(herohp.innerHTML <= 0){
     znackadva.style.display = "none";
   }
+  portal.style.display = "none";
  }
 
 
