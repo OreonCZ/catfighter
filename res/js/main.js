@@ -71,6 +71,15 @@ const hrathell = document.getElementById("hrathell");
 const pausehell = document.getElementById("pausehell");
 const hellcat = document.getElementById("hellcat");
 const grim = document.getElementById("grim");
+const heart = document.getElementById("heart");
+const hpcat = document.getElementById("hpcat");
+const souls = document.getElementById("souls");
+const dialog = document.getElementById("dialog");
+
+const again = document.getElementById("again");
+const grave = document.getElementById("grave");
+const skeleton = document.getElementById("skeleton");
+const coffin = document.getElementById("coffin");
 
 
 let hpUp = 20;
@@ -78,6 +87,8 @@ let hpUpUp = 5;
 let hpmain = 10;
 let hpenemy = 10;
 let hpenemyUp = 120;
+
+let hpGamble = 50;
 
 let dmgUp = 0.5;
 let dmgmain = 1;
@@ -89,6 +100,8 @@ let enemyKillUp = 1;
 
 let dojocoin = 0;
 let dojocoinUp = 5;
+let hellcoin = 0;
+let hellcoinUp = 1;
 
 
 sigmacat.onclick = () => {
@@ -223,6 +236,7 @@ znacka2.onclick = () => {
    wu.style.display = "block";
    dojopauza.style.display = "block";
    hudbatri.play();
+   hudbatri.currentTime = 90;
    hudbatri.volume = 0.3;
    counterdva.style.display = "block";
    frank.style.display = "block";
@@ -235,7 +249,7 @@ dojopauza.onclick = () => {
   dojopauza.style.display = "none";
   dojohrat.style.display = "block";
   hudbatri.pause();
-  hudbatri.currentTime = 0;
+  hudbatri.currentTime = 90;
 
 }
 dojohrat.onclick = () => {
@@ -310,6 +324,12 @@ portal.onclick = () => {
    pausehell.style.display = "block";
    hellcat.style.display = "block";
    grim.style.display = "block";
+   heart.style.display = "block";
+   hpcat.style.display = "block";
+   souls.style.display = "block";
+   dialog.style.display = "block";
+   hpcat.innerHTML = hpmain;
+   hpcat.innerHTML = `${hpmain}`;
 }
 pausehell.onclick = () => {
   pausehell.style.display = "none";
@@ -349,6 +369,11 @@ portal2.onclick = () => {
   hrathell.style.display = "none";
   hellcat.style.display = "none";
   grim.style.display = "none";
+  infodmg3.style.display = "none";
+  heart.style.display = "none";
+  hpcat.style.display = "none";
+  souls.style.display = "none";
+  dialog.style.display = "none";
 }
 
  cat.onclick = () => {
@@ -403,6 +428,7 @@ portal2.onclick = () => {
   pauzafight.style.display = "block";
   hudbafight.play();
   hudbafight.volume = 0.3;
+  hudbafight.currentTime = 16.24;
   fight.style.display = "block";
   herohp.innerHTML = hpmain;
   
@@ -414,8 +440,16 @@ portal2.onclick = () => {
     if(herohp.innerHTML <= 0){
       clearInterval(enemyAttack);
       fight.style.display = "none";
-      bronze.style.display = "block";
-      zpet.style.display = "block";
+      document.body.style.backgroundImage = "url(./res/css/forestosbw.jpg)"
+      grave.style.display = "block";
+      again.style.display = "block";
+      catfight.style.display = "none";
+      cathero.style.display = "none";
+      hratfight.style.border = "1px solid white";
+      pauzafight.style.border = "1px solid white";
+      info.style.display = "block";
+      coffin.style.display = "block";
+      heroattack.style.display = "none";
 
       }
     
@@ -423,6 +457,8 @@ portal2.onclick = () => {
       clearInterval(enemyAttack);
       hpUp+=hpUpUp;
       dojocoin+=dojocoinUp;
+      hellcoin+=hellcoinUp;
+      souls.innerHTML = `Souls: ${hellcoin}`
       zpet.style.display = "block";
       info.innerHTML = `Enemies killed: ${enemyKillUp}`
       infodmg.innerHTML = `Skill points: ${dojocoin}`
@@ -439,9 +475,41 @@ portal2.onclick = () => {
   }, 250);
 }
 
+heart.onclick = () => {
+  if(hellcoin >=1){
+  hellcoin-=1;
+  souls.innerHTML = souls.innerHTML = `Souls: ${hellcoin}`
+}
+  else{
+  hpmain -= hpGamble;
+  hpcat.innerHTML = hpmain;
+  counterjedna.innerHTML = `${hpmain} HP`;
+  hpstat.innerHTML = hpmain +" HP";
+}
+dialog.style.display = "none";
+if(hpmain<=0){
+   hellcat.style.display = "none";
+   grim.style.display = "none";
+   heart.style.display = "none";
+   hpcat.style.display = "none";
+   souls.style.display = "none";
+   dialog.style.display = "none";
+   portal2.style.display = "none";
+   document.body.style.backgroundImage = "url(./res/css/forestosbw.jpg)";
+  hrathell.style.border = "1px solid white";
+  pausehell.style.border = "1px solid white";
+
+  again.style.display = "block";
+  grave.style.display = "block";
+  info.style.display = "block";
+  skeleton.style.display = "block";
+}
+
+}
+
  pauzafight.onclick = () => {
    hudbafight.pause();
-   hudbafight.currentTime = 0;
+   hudbafight.currentTime = 16.24;
    hratfight.style.display = "block";
    pauzafight.style.display = "none";
  }

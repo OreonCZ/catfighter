@@ -17,6 +17,55 @@ body {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    transition: .2s;
+}
+@font-face {
+    font-family: deathfont;
+    src: url(./font/deathfont.otf);
+}
+
+#dialog {
+    font-family: deathfont;
+    src: url(deathfont.otf);
+    font-size: 30px;
+    color:  black;
+    display: none;
+    position: absolute;
+    top: 350px;
+    max-width: 350px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#ded {
+    width: 100%;
+    text-align: center;
+}
+
+#again {
+    margin: 0 auto;
+    background: linear-gradient(white, beige, red);
+    border: 2px solid black;
+display: none;
+    font-size: 50px;
+    cursor: pointer;
+    top: 360px;
+    position: relative;
+    transition: .1s;
+}
+#again:hover {
+    background: linear-gradient(white, beige, green);
+    transition: .1s;
+}
+#pls {
+    text-decoration: none;
+}
+
+#grave {
+    max-width: 300px;
+    top: 450px;
+    margin: 0 auto;
+    display: none;
+    position: relative;
 }
 
 #sponsors {
@@ -102,6 +151,44 @@ max-width: 500px;
     max-width: 350px;
     display: none;
     top: 400px;
+}
+#heart {
+    max-width: 200px;
+    margin: 0 auto;
+    position: relative;
+    display: none;
+    top: -150px;
+    cursor: pointer;
+    transition: .1s;
+    
+}
+#hpcat {
+    position: absolute;
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: green;
+    display: none;
+    left: 10%;
+    top: 590px;
+}
+#heart:hover {
+    max-width: 220px;
+    transition: .1s;
+}
+#souls {
+    position: absolute;
+    background: linear-gradient(white, beige, red);
+    bottom: 0px;
+    color: black;
+    text-decoration: none;
+    margin: 5px;
+    font-size: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px black solid;
+    display: none;
+    right: 0px;
 }
 
 #cat {
@@ -475,6 +562,20 @@ max-width: 500px;
     top: 0px;
     cursor: pointer;
 }
+#skeleton {
+    position: relative;
+    display: none;
+    max-width: 300px;
+    margin: 0 auto;
+    top: -400px;
+}
+#coffin {
+    position: relative;
+    display: none;
+    max-width: 400px;
+    margin: 0 auto;
+    top: -360px;
+}
 
 #info2 {
     text-align: center;
@@ -603,6 +704,9 @@ max-width: 500px;
     #grim{
     right: 20%;
 }
+#dialog {
+    right: 20%;
+}
 
   }
   @media all and (min-width: 1200px) {
@@ -624,6 +728,9 @@ max-width: 500px;
     #grim{
         right: 35%;
     }
+    #dialog {
+        right: 35%;
+    }
     
     
   }
@@ -633,6 +740,9 @@ max-width: 500px;
         top: 40px;
     }
     #grim{
+        right: 0%;
+    }
+    #dialog{
         right: 0%;
     }
   }
@@ -706,7 +816,25 @@ max-width: 500px;
     #hellcat {
         top: 730px;
     }
+    #hpcat {
+        top: 690px;
+    }
     #grim {
         top: 500px;
+    }
+    #dialog {
+        top: 450px;
+    }
+    #grave {
+        top: 550px;
+    }
+    #again {
+        top: 460px;
+    }
+    #skeleton {
+        top: -300px;
+    }
+    #coffin {
+        top: -260px;
     }
 }
