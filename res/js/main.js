@@ -450,30 +450,39 @@ portal2.onclick = () => {
       info.style.display = "block";
       coffin.style.display = "block";
       heroattack.style.display = "none";
+      zpet.style.display = "none";
+      fatality.style.display = "none";
 
       }
-    
+      
+
     if(hp.innerHTML <= 0){
+      zpet.style.display = "block";
+        fatality.style.display = "block";
+         if(herohp.innerHTML <= 0 && hp.innerHTML <= 0){
+          zpet.style.display = "none";
+          fatality.style.display = "none";
+        }
       clearInterval(enemyAttack);
       hpUp+=hpUpUp;
       dojocoin+=dojocoinUp;
       hellcoin+=hellcoinUp;
       souls.innerHTML = `Souls: ${hellcoin}`
-      zpet.style.display = "block";
       info.innerHTML = `Enemies killed: ${enemyKillUp}`
       infodmg.innerHTML = `Skill points: ${dojocoin}`
       infodmg2.innerHTML = `Skill points: ${dojocoin}`
       infodmg3.innerHTML = `Skill points: ${dojocoin}`
-      fatality.style.display = "block";
       fight.style.display = "none";
       catfight.style.display = "none";
       enemyKillUp++;
       dmgenemy++;
-      
-
     }
+
   }, 250);
 }
+
+  
+
 
 heart.onclick = () => {
   if(hellcoin >=1){
