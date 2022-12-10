@@ -639,6 +639,27 @@ max-width: 500px;
     top: 10px;
 }
 
+#nula, #jedna, #dva, #tri, #ctyri, #pet {
+    display: none;
+    text-align: center;
+    position: relative;
+    font-size: 50px;
+    top: -50px;
+    font-family: deathfont;
+    src: url(deathfont.otf);
+}
+#sest {
+    display: none;
+    font-size: 50px;
+    font-family: deathfont;
+    src: url(deathfont.otf);
+    color: red;
+    position: absolute;
+    bottom: 0px;
+    right: 5px;
+
+}
+
 
 @media all and (max-width: 1600px) {
 
