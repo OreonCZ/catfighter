@@ -598,6 +598,83 @@ heart.onclick = () => {
   hpcat.innerHTML = hpmain;
   counterjedna.innerHTML = `${hpmain} HP`;
   hpstat.innerHTML = hpmain +" HP";
+  let randomgamble = gamble[Math.floor(Math.random() * gamble.length)];
+
+  if(randomgamble == 0){
+    nula.style.display = "block";
+    jedna.style.display = "none";
+    dva.style.display = "none";
+    tri.style.display = "none";
+    ctyri.style.display = "none";
+    pet.style.display = "none";
+  }
+  if(randomgamble == 1){
+    dmgUp++;
+    jedna.style.display = "block";
+    nula.style.display = "none";
+    dva.style.display = "none";
+    tri.style.display = "none";
+    ctyri.style.display = "none";
+    pet.style.display = "none";
+  }
+  if(randomgamble == 2){
+    hpUp+= 5;
+    dva.style.display = "block";
+    nula.style.display = "none";
+    jedna.style.display = "none";
+    tri.style.display = "none";
+    ctyri.style.display = "none";
+    pet.style.display = "none";
+  }
+  if(randomgamble == 3){
+    dmgUp--;
+    tri.style.display = "block";
+    nula.style.display = "none";
+    dva.style.display = "none";
+    jedna.style.display = "none";
+    ctyri.style.display = "none";
+    pet.style.display = "none";
+  }
+  if(randomgamble == 4){
+    hpUp-= 5;
+    ctyri.style.display = "block";
+    tri.style.display = "none";
+    nula.style.display = "none";
+    dva.style.display = "none";
+    jedna.style.display = "none";
+    pet.style.display = "none";
+
+  }
+  if(randomgamble == 5){
+    dojocoinUp++;
+    pet.style.display = "block";
+    tri.style.display = "none";
+    nula.style.display = "none";
+    dva.style.display = "none";
+    jedna.style.display = "none";
+    ctyri.style.display = "none";
+  }
+  if(randomgamble == 6){
+    infohell.style.display = "none";
+    sest.style.display = "block";
+
+    hellcat.style.display = "none";
+   grim.style.display = "none";
+   heart.style.display = "none";
+   hpcat.style.display = "none";
+   souls.style.display = "none";
+   dialog.style.display = "none";
+   portal2.style.display = "none";
+  document.body.style.backgroundImage = "url(./res/css/forestosbw.jpg)";
+  hrathell.style.border = "1px solid white";
+  pausehell.style.border = "1px solid white";
+
+  again.style.display = "block";
+  grave.style.display = "block";
+  info.style.display = "block";
+  skeleton.style.display = "block";
+  
+  }
 }
 dialog.style.display = "none";
 if(hpmain<=0){
