@@ -1,4 +1,4 @@
-# catfighter V1.3.5.
+# catfighter 1.3.5.
 [Spustit](https://OreonCZ.github.io/catfighter/)
 <hr>
 <h1>catfighter 1.3.5.</h2>
