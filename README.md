@@ -4,7 +4,6 @@
 <h1>catfighter 1.3.5.</h2>
 <p>Currently working on 3 bosses.</p>
 <hr>
-<hr>
 <h1>catfighter 1.3.</h2>
 <p>Death screen and new location (not finished).</p>
 <hr>
