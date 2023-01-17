@@ -3,6 +3,7 @@ const hudbadva = document.getElementById("hudbadva");
 const hudbatri = document.getElementById("hudbatri");
 const hudbafight = document.getElementById("hudbafight");
 const hudbahell = document.getElementById("hudbahell");
+const oblivion = document.getElementById("oblivion");
 
 
 const menunadpis = document.getElementById("menunadpis");
@@ -91,6 +92,21 @@ const sest = document.getElementById("sest");
 
 const infohell = document.getElementById("infohell");
 
+const portalboss = document.getElementById("portalboss");
+const catz = document.getElementById("catz");
+const portalback = document.getElementById("portalback");
+const bosshrat = document.getElementById("bosshrat");
+const bosspauza = document.getElementById("bosspauza");
+const peace = document.getElementById("peace");
+const future = document.getElementById("future");
+const abyss = document.getElementById("abyss");
+const vyber = document.getElementById("vyber");
+const sipky = document.getElementById("sipky");
+const next = document.getElementById("next");
+const previous = document.getElementById("previous");
+
+let numero = 0;
+let numeroUp = 1;
 
 let hpUp = 20;
 let hpUpUp = 5;
@@ -392,10 +408,149 @@ portal2.onclick = () => {
   dialog.style.display = "none";
 }
 
+portalboss.onclick = () => {
+  portal.style.display = "none";
+  document.body.style.backgroundImage = "url(./res/css/darkforest.jpg)"
+  znacka.style.display = "none";
+   znackadva.style.display = "none";
+   nadpis.style.display = "none";
+   cat.style.display = "none";
+   hrat.style.display = "none";
+   pauza.style.display = "none";
+   pozadi.style.display = "none";
+   znacka2.style.display = "none";
+   stat.style.display = "none";
+   catz.style.display = "block";
+   portalback.style.display = "block";
+   bosspauza.style.display = "block";
+  vyber.style.display = "block";
+   
+   oblivion.play();
+   oblivion.volume = 0.3;
+   hudba.pause();
+   hudba.currentTime = 0;
+}
+
+portalback.onclick = () => {
+  document.body.style.backgroundImage = "url(./res/css/forestos.jpg)";
+  portalback.style.display = "none";
+  portalboss.style.display = "none";
+  catz.style.display = "none";
+  catdva.style.display = "none";
+  stat.style.display = "none";
+  hrat.style.display = "none";
+  znacka.style.display = "block";
+   znackadva.style.display = "block";
+   nadpis.style.display = "block";
+   cat.style.display = "block";
+   pauza.style.display = "block";
+   pozadi.style.display = "block";
+   znacka2.style.display = "block";
+   bosshrat.style.display = "none";
+   bosspauza.style.display = "none";
+   vyber.style.display = "none";
+   sipky.style.display = "none";
+   abyss.style.display = "none";
+   future.style.display = "none";
+   peace.style.display = "none";
+
+   oblivion.pause();
+   oblivion.currentTime = 0;
+   hudba.play();
+  hudba.volume = 0.3;
+}
+
+vyber.onclick = () => {
+  vyber.style.display = "none";
+  sipky.style.display = "block";
+  
+  if(numero == 0){
+    abyss.style.display = "block";
+    future.style.display = "none";
+    peace.style.display = "none";
+  }
+  if(numero == -1){
+    peace.style.display = "block";
+    abyss.style.display = "none";
+    future.style.display = "none";
+    previous.style.display = "none";
+  }
+  if(numero == 1){
+    abyss.style.display = "none";
+    future.style.display = "block";
+    peace.style.display = "none";
+    next.style.display = "none";
+  }
+
+}
+previous.onclick = () => {
+  numero -= numeroUp;
+  if(numero == -1){
+    peace.style.display = "block";
+    abyss.style.display = "none";
+    future.style.display = "none";
+    previous.style.display = "none";
+  }
+  if(numero == 0){
+    abyss.style.display = "block";
+    future.style.display = "none";
+    peace.style.display = "none";
+    next.style.display = "block";
+    previous.style.display = "block";
+  }
+  if(numero == 1){
+    abyss.style.display = "none";
+    future.style.display = "block";
+    peace.style.display = "none";
+    next.style.display = "none";
+  }
+  
+}
+next.onclick = () => {
+  numero+= numeroUp;
+  if(numero == -1){
+    peace.style.display = "block";
+    abyss.style.display = "none";
+    future.style.display = "none";
+    previous.style.display = "none";
+  }
+  if(numero == 0){
+    abyss.style.display = "block";
+    future.style.display = "none";
+    peace.style.display = "none";
+    next.style.display = "block";
+    previous.style.display = "block";
+  }
+  if(numero == 1){
+    abyss.style.display = "none";
+    future.style.display = "block";
+    peace.style.display = "none";
+    next.style.display = "none";
+  }
+}
+
+bosspauza.onclick = () => {
+  bosspauza.style.display = "none";
+  bosshrat.style.display = "block";
+  oblivion.pause();
+   oblivion.currentTime = 0;
+}
+bosshrat.onclick = () => {
+  bosshrat.style.display = "none";
+  bosspauza.style.display = "block";
+  oblivion.play();
+   oblivion.volume = 0.3;
+}
+
  cat.onclick = () => {
   if(enemyKillUp >= 4){
     portal.style.display = "block";
     }
+  if(enemyKillUp>= 4){
+    portalboss.style.display = "block";
+    nadpis.style.display = "none";
+
+  }  
    cat.style.display = "none";
    catdva.style.display = "block";
    stat.style.display = "block";
@@ -411,6 +566,8 @@ portal2.onclick = () => {
  }
  
  catdva.onclick = () => {
+  portalboss.style.display = "none";
+  nadpis.style.display = "block";
    cat.style.display = "block";
    catdva.style.display = "none";
    stat.style.display = "none";   
@@ -772,3 +929,5 @@ hpenemyUp += hpenemyPlus
   dmgenemy+=dmgenemyUp;
   
 }
+
+

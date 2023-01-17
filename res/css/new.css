@@ -99,10 +99,69 @@ display: none;
 }
 
 #nadpis {
-margin: 0 auto;
-position: relative;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
 max-width: 500px;
     display: none;
+}
+#peace {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    max-width: 420px;
+    cursor: pointer;
+    display: none;
+    top: 100px;
+}
+#future {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    max-width: 370px;
+    cursor: pointer;
+    display: none;
+    top: 120px;
+}
+#abyss {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    max-width: 600px;
+    cursor: pointer;
+    display: none;
+    transition: 1s ease-in-out;
+    top: 100px;
+}
+
+#portalboss {
+    position: absolute;
+    max-width: 140px;
+    top: 650px;
+    right: 5%;
+    display: none;
+    cursor: pointer;
+}
+
+#portalback {
+    position: absolute;
+    max-width: 140px;
+    top: 650px;
+    left: 5%;
+    display: none;
+    cursor: pointer;
 }
 
 #portal {
@@ -118,6 +177,25 @@ max-width: 500px;
     position: absolute;
     max-width: 200px;
     top: 0px;
+    cursor: pointer;
+}
+
+#bosshrat {
+    max-width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    margin: 5px;
+    display: none;
+    cursor: pointer;
+}
+#bosspauza {
+    max-width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    margin: 5px;
+    display: none;
     cursor: pointer;
 }
 
@@ -190,13 +268,28 @@ max-width: 500px;
     display: none;
     right: 0px;
 }
+#catz {
+    display: none;
+    max-width: 200px;
+    position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+top: 640px;
+}
 
 #cat {
-    max-width: 200px;
     display: none;
-   margin: 0 auto;
-   position: relative;
-   top: 340px;
+    max-width: 200px;
+    position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+top: 640px;
 }
 
 
@@ -205,7 +298,7 @@ max-width: 500px;
     display: none;
    margin: 0 auto;
    position: relative;
-   top: 365px;
+   top: 675px;
 }
 #catsleep {
     max-width: 250px;
@@ -660,6 +753,51 @@ max-width: 500px;
 
 }
 
+#vyber {
+    display: none;
+    max-width: 200px;
+    position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+    font-size: 30px;
+    top: 500px;
+    background: linear-gradient(white, beige, burlywood);
+    border: 2px black solid;
+    cursor: pointer;
+}
+#sipky {
+    position: relative;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+font-size: 30px;
+display: none;
+width: 100%;
+top: 520px;
+
+}
+#previous {
+    background: linear-gradient(white, beige, burlywood);
+    position: absolute;
+    border: 2px solid black;
+    cursor: pointer;
+    left: 10%;
+    width: 50px;
+}
+#next {
+    background: linear-gradient(white, beige, burlywood);
+    position: absolute;
+    border: 2px solid black;
+    cursor: pointer;
+    right: 10%;
+    width: 50px;
+}
+
 
 @media all and (max-width: 1600px) {
 
@@ -679,16 +817,21 @@ max-width: 500px;
    
   }
   @media all and (max-width: 1200px) {
+
     #nadpis {
-        max-width: 350px;
-        position: relative;
-        margin-top: 5px;
+        position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+max-width: 300px;
     }
     #cat {
-        top: 400px;
+        top: 600px;
     }
     #catdva {
-        top: 420px;
+        top: 640px;
     }
     #wu {
         margin-top: -550px;
@@ -723,8 +866,13 @@ max-width: 500px;
     }
     #portal {
         max-width: 150px;
+        bottom: 125px;
+    }
+    #portalback {
+        max-width: 150px;
         bottom: 100px;
     }
+
     #grim{
     right: 20%;
 }
@@ -734,6 +882,13 @@ max-width: 500px;
 
   }
   @media all and (min-width: 1200px) {
+    #previous {
+    left: 30%;
+    }
+    #next {
+        right: 30%;
+    }
+    
     #wu {
         margin-left: 200px;
         margin-top: -400px;
@@ -790,10 +945,13 @@ max-width: 500px;
 
 
     #cat {
-        top: 410px;
+        top: 720px;
+    }
+    #catz {
+        top: 720px;
     }
     #catdva {
-        top: 460px;
+        top: 760px;
     }
     #znacka {
         top: 720px;
@@ -802,6 +960,9 @@ max-width: 500px;
         top: 520px;
     }
     #znackadva {
+        top: 720px;
+    }
+    #portalboss {
         top: 720px;
     }
     #stat {
@@ -822,7 +983,9 @@ max-width: 500px;
         top: 730px;
     }
 
-
+    #portal {
+        bottom: 120px;
+    }
 
     #menunadpis {
         margin-top: 390px;
